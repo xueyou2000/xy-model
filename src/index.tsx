@@ -1,18 +1,6 @@
-import React from "react";
+import Model from "./Model";
+import ModelBody from "./ModelBody";
+import ModelFooter from "./ModelFooter";
+import ModelHeader from "./ModelHeader";
 
-export interface MyComponentProps {
-    /**
-     * 根节点附加类名
-     */
-    className?: string;
-    /**
-     * 内敛样式
-     */
-    style?: React.CSSProperties;
-}
-
-export function MyComponent(props: MyComponentProps) {
-    return <div>Hello</div>;
-}
-
-export default MyComponent;
+export { Model, ModelBody, ModelFooter, ModelHeader };

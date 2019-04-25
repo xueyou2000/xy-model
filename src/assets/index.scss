@@ -1,0 +1,73 @@
+$ModelPrefix: "xy-model";
+$FooterPrefix: "xy-model__footer";
+$BodyPrefix: "xy-model__body";
+$HeaderPrefix: "xy-model__header";
+
+.#{$ModelPrefix} {
+    width: 420px;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.#{$FooterPrefix} {
+    padding: 10px 15px;
+    text-align: right;
+    border-top: 1px solid #e9eaec;
+    box-sizing: border-box;
+
+    .xy-button + .xy-button {
+        margin-left: 10px;
+    }
+}
+
+.#{$HeaderPrefix} {
+    position: relative;
+    padding: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e9eaec;
+    box-sizing: border-box;
+
+    &.#{$HeaderPrefix}-center {
+        text-align: center;
+    }
+    &.#{$HeaderPrefix}-left {
+        text-align: left;
+    }
+}
+.#{$HeaderPrefix}-title {
+    padding-left: 0;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1;
+    color: #2d2f33;
+    margin-right: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.#{$HeaderPrefix}-close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.65);
+    transition: 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+    transform-origin: center center;
+
+    &:hover {
+        color: #000;
+        transform: rotate(180deg);
+    }
+}
+
+.#{$BodyPrefix} {
+    position: relative;
+    padding: 10px 15px;
+    color: #5a5e66;
+}

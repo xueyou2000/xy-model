@@ -33,11 +33,27 @@ yarn add xy-model
 
 ## 使用
 
-```ts
+`ModelFooter`将没有 onClick 事件的元素默认带上关闭对话框事件
+
+```tsx
 import React from "react";
 import ReactDOM from "react-dom";
-import XyModel from "xy-model";
-ReactDOM.render(<XyModel />, container);
+import { Model, ModelBody, ModelFooter } from "xy-model";
+ReactDOM.render(
+    <Model title="对话框标题" maskClose={false} visible={visible} onChange={setVisible}>
+        <ModelBody>
+            <p>这是对话框内容</p>
+            <p>这是对话框内容</p>
+            <p>这是对话框内容</p>
+            <p>这是对话框内容</p>
+        </ModelBody>
+        <ModelFooter>
+            <Button type="text">取消</Button>
+            <Button type="primary">确定</Button>
+        </ModelFooter>
+    </Model>,
+    container
+);
 ```
 
 ## 开发
