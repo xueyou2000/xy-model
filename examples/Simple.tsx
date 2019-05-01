@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Model, ModelBody, ModelFooter, ModelHeader } from "../src";
+import "../src/assets/index";
 import { Button } from "xy-button";
 import "xy-button/assets/index.css";
 
@@ -8,7 +9,6 @@ export default function() {
 
     return (
         <div>
-            <h1>简单演示</h1>
             <Button onClick={() => setVisible(!visible)}>切换</Button>
             <Model title="对话框标题" maskClose={false} visible={visible} onChange={setVisible}>
                 <ModelBody>

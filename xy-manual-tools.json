@@ -1,0 +1,7 @@
+[
+    {
+        "name": "Simple",
+        "title": "模态对话框",
+        "desc": "ModelBody组件包裹对话框内容， ModelFooter组件包裹页脚按钮"
+    }
+]
