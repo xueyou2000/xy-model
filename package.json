@@ -1,6 +1,6 @@
 {
     "name": "xy-model",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "基于React的模态对话框组件",
     "types": "es/index.d.ts",
     "main": "es/index.js",
@@ -38,12 +38,12 @@
     "devDependencies": {
         "@types/jest": "24.0.6",
         "@types/node": "11.9.4",
-        "@types/react": "16.8.4",
+        "@types/react": "16.8.2",
         "@types/react-dom": "16.8.2",
-        "quick-react-scripts": "1.1.2",
+        "quick-react-scripts": "1.1.4",
         "react-testing-library": "^6.0.0",
         "xy-button": "^0.0.2",
-        "xy-manual-tools": "0.0.6"
+        "xy-manual-tools": "0.1.0"
     },
     "dependencies": {
         "classnames": "^2.2.6",
