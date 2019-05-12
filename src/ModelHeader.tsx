@@ -5,14 +5,16 @@ import { ModelContext } from "./Context";
 
 export function ModelHeader(props: ModelHeaderProps) {
     const { prefixCls = "xy-model__header", className, style, children, titleAlign = "center" } = props;
-    const context = useContext(ModelContext);
+    const close = useContext(ModelContext);
     const classString = classNames(prefixCls, className, {
-        [`${prefixCls}-${titleAlign}`]: true
+        [`${prefixCls}-${titleAlign}`]: true,
     });
 
+    console.log("重新渲染  -- ModelHeader");
+
     function closeHandle(e: React.MouseEvent<HTMLElement>) {
-        if (context) {
-            context.close();
+        if (close) {
+            close();
         }
     }
 

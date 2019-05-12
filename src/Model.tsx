@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React from "react";
+import React, { useCallback } from "react";
 import { MessageBox } from "xy-messagebox";
 import "xy-messagebox/assets/index.css";
 import { ModelProps } from "./interface";
@@ -10,22 +10,22 @@ export function Model(props: ModelProps) {
     const { prefixCls = "xy-model", className, style, children, title, ...rest } = props;
     let closeFunc: Function;
 
-    function getCloseFunc(close: Function) {
+    const getCloseFunc = useCallback((close: Function) => {
         closeFunc = close;
         if (props.getCloseFunc) {
-            props.getCloseFunc(closeHandle);
+            props.getCloseFunc(close);
         }
-    }
+    }, []);
 
-    function closeHandle() {
+    const closeHandle = useCallback(() => {
         if (closeFunc) {
             closeFunc();
         }
-    }
+    }, []);
 
     return (
         <MessageBox {...rest} getCloseFunc={getCloseFunc}>
-            <ModelContext.Provider value={{ close: closeHandle }}>
+            <ModelContext.Provider value={closeHandle}>
                 <div className={classNames(prefixCls, className)} style={style}>
                     {title && <ModelHeader>{title}</ModelHeader>}
                     {children}

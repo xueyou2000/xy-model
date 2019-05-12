@@ -5,11 +5,13 @@ import { ModelContext } from "./Context";
 
 export function ModelFooter(props: ModelFooterProps) {
     const { prefixCls = "xy-model__footer", className, style, children } = props;
-    const context = useContext(ModelContext);
+    const close = useContext(ModelContext);
+
+    console.log("重新渲染  -- ModelFooter");
 
     function closeHandle(e: React.MouseEvent<HTMLElement>) {
-        if (context) {
-            context.close();
+        if (close) {
+            close();
         }
         e.stopPropagation();
         e.preventDefault();
