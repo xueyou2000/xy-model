@@ -17,9 +17,9 @@ export function Model(props: ModelProps) {
         }
     }, []);
 
-    const closeHandle = useCallback(() => {
+    const closeHandle = useCallback((args) => {
         if (closeFunc) {
-            closeFunc();
+            closeFunc(args);
         }
     }, []);
 

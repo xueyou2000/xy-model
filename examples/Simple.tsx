@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Model, ModelBody, ModelFooter, ModelHeader } from "../src";
 import { Button } from "xy-button";
 import "xy-button/assets/index.css";
+import { ModelContext } from "../src/Context";
 
 const ModelBodyMemo = React.memo(() => {
+    const close = useContext(ModelContext);
+
     return (
         <ModelBody>
             <p>这是对话框内容</p>
             <p>这是对话框内容</p>
             <p>这是对话框内容</p>
             <p>这是对话框内容</p>
+            <button onClick={() => close("测试关闭参数")}>测试</button>
         </ModelBody>
     );
 });
@@ -37,7 +41,7 @@ export default function() {
     return (
         <div>
             <Button onClick={() => setVisible(!visible)}>切换</Button>
-            <Model title="对话框标题" maskClose={false} visible={visible} onChange={setVisible}>
+            <Model title="对话框标题" maskClose={false} visible={visible} onChange={setVisible} onUnmount={(args) => console.log(args)}>
                 <ModelBodyMemo />
                 <ModelFooterMemo setVisible={setVisible} />
             </Model>

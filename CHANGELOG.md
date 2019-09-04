@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.0.52 (Wed Sep 04 2019)
+
+-   `ModelContext`支持传递参数
+
 ## 0.0.51 (Wed Sep 04 2019)
 
 -   清除控制台打印, 优化代码警告
