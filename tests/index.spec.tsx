@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent } from "react-testing-library";
+import { render, fireEvent } from "@testing-library/react";
 import { Model, ModelBody, ModelFooter } from "../src";
 
 describe("component", () => {
@@ -20,7 +20,7 @@ describe("component", () => {
                     <button>确定</button>
                 </ModelFooter>
             </Model>,
-            { container }
+            { container },
         );
 
         const p = wrapper.getByText("对话框标题");
@@ -50,7 +50,7 @@ describe("component", () => {
                     <button>确定</button>
                 </ModelFooter>
             </Model>,
-            { container }
+            { container },
         );
         const model = container.querySelector(".xy-messagebox");
         expect(model.classList.contains("xy-messagebox-open")).toBeTruthy();
@@ -75,7 +75,7 @@ describe("component", () => {
                     <button>取消</button>
                 </ModelFooter>
             </Model>,
-            { container }
+            { container },
         );
         const model = container.querySelector(".xy-messagebox");
         expect(model.classList.contains("xy-messagebox-open")).toBeTruthy();

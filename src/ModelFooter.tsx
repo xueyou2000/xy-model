@@ -7,7 +7,6 @@ export function ModelFooter(props: ModelFooterProps) {
     const { prefixCls = "xy-model__footer", className, style, children } = props;
     const close = useContext(ModelContext);
 
-    console.log("重新渲染  -- ModelFooter");
 
     function closeHandle(e: React.MouseEvent<HTMLElement>) {
         if (close) {

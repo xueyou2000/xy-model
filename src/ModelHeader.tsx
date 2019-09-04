@@ -10,8 +10,6 @@ export function ModelHeader(props: ModelHeaderProps) {
         [`${prefixCls}-${titleAlign}`]: true,
     });
 
-    console.log("重新渲染  -- ModelHeader");
-
     function closeHandle(e: React.MouseEvent<HTMLElement>) {
         if (close) {
             close();
