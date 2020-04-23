@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.1.1 (Thu Apr 23 2020)
+
+-   增加`closeBtn`属性, 自定义页眉按钮
+
 ## 0.1.0 (Tue Nov 19 2019)
 
 -   修复`react`与`react-dom`版本不一致导致的问题

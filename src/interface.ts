@@ -40,6 +40,10 @@ export interface ModelHeaderProps {
      * 页眉对齐方式
      */
     titleAlign?: "center" | "left";
+    /**
+     * 关闭按钮自定义
+     */
+    closeBtn?: React.ReactNode;
 }
 
 export interface ModelBodyProps {
@@ -73,4 +77,8 @@ export interface ModelProps extends MessageBoxProps {
      * 对话框标题
      */
     title?: React.ReactNode;
+    /**
+     * 关闭按钮自定义
+     */
+    closeBtn?: React.ReactNode;
 }

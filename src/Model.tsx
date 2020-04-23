@@ -7,7 +7,7 @@ import { ModelContext } from "./Context";
 import ModelHeader from "./ModelHeader";
 
 export function Model(props: ModelProps) {
-    const { prefixCls = "xy-model", className, style, children, title, ...rest } = props;
+    const { prefixCls = "xy-model", className, style, children, title, closeBtn, ...rest } = props;
     let closeFunc: Function;
 
     const getCloseFunc = useCallback((close: Function) => {
@@ -27,7 +27,7 @@ export function Model(props: ModelProps) {
         <MessageBox {...rest} getCloseFunc={getCloseFunc}>
             <ModelContext.Provider value={closeHandle}>
                 <div className={classNames(prefixCls, className)} style={style}>
-                    {title && <ModelHeader>{title}</ModelHeader>}
+                    {title && <ModelHeader closeBtn={closeBtn}>{title}</ModelHeader>}
                     {children}
                 </div>
             </ModelContext.Provider>

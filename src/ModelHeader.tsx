@@ -4,7 +4,7 @@ import { ModelHeaderProps } from "./interface";
 import { ModelContext } from "./Context";
 
 export function ModelHeader(props: ModelHeaderProps) {
-    const { prefixCls = "xy-model__header", className, style, children, titleAlign = "center" } = props;
+    const { prefixCls = "xy-model__header", className, style, children, titleAlign = "center", closeBtn = "✖" } = props;
     const close = useContext(ModelContext);
     const classString = classNames(prefixCls, className, {
         [`${prefixCls}-${titleAlign}`]: true,
@@ -20,7 +20,7 @@ export function ModelHeader(props: ModelHeaderProps) {
         <div className={classString} style={style}>
             <p className={`${prefixCls}-title`}>{children}</p>
             <span className={`${prefixCls}-close`} onClick={closeHandle}>
-                ✖
+                {closeBtn}
             </span>
         </div>
     );
